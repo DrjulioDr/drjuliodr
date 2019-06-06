@@ -1,6 +1,5 @@
 #include <stdio.h>
-// GCC Versão 8.3.0-6
-
+// GCC Versão 8.3.0
 int main(){
     int ano, joao;
     ano = 2008;
@@ -12,7 +11,9 @@ int main(){
         if (joao >= 160000)
         {
             break;
-        }     
+        }
+        
     }
     printf("O ano será %d\nJoão terá: %d", ano, joao);
     return 0;
+}
