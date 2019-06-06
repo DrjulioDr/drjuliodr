@@ -1,55 +1,50 @@
 #include <stdio.h>
 #include <string.h>
-
 // GCC Versão 8.3.0-6
-
 int main()
 {
     double sal;
-    char nome[15], genero[10] = "F", homem[10], mulher[10];
+    char nome[15], sexo[10] = "F", homem[10], mulher[10];
     int days, func, media, total;
     func = 0;
     media = 0;
     total = 0;
     strcpy(homem,"M");
     strcpy(mulher,"F");
-
     while (1)
     {    
         printf("\nInforme seu nome: ");
         scanf(" %s", nome);
         getchar();
-        printf("\nInforme seu sexo M ou F apenas:");
-        scanf(" %c", genero);
+        printf("Informe seu sexo [M ou F apenas]:\n");
+        scanf(" %c", sexo);
         getchar();
-        printf("\nInforme o seu salário:");
+        printf("Informe o seu salário:\n");
         scanf("%lf", &sal);
         getchar();
-        printf("\nInforme os dias trabalhados no último mês:");
+        printf("Informe os dias trabalhados no último mês: \n");
         scanf("%d", &days);
         getchar();
         func += 1;
-
-        if (strcmp(genero, homem) == 0)
+        if (strcmp(sexo, homem) == 0)
         {
             if (sal > 1200)
             {
-                printf("Voce ja nao tem mais direito ao plano de saude, lamento...\n");
-            }            
+                printf("Você já não tem mais direito ao plano de saúde, lamento...\n");
+            }
             else
             {
-                printf("Voce precisa de um aumento de R$%.2f para perder o plano de saude\n", 1200-sal);
+                printf("Você precisa de um aumento de R$%.2f para perder o plano de saúde\n", 1200-sal);
             }
         }
         else{
             if (sal > 1500)
             {
-                printf("Voce ja nao tem mais direito ao plano de saude, lamento...\n");
+                printf("Você já não tem mais direito ao plano de saúde, lamento...\n");
             }
-
             else
             {
-                printf("Voce precisa de aumento de R$%.2f para perder o plano de saude\n", 1500-sal);
+                printf("Você precisa de aumento de R$%.2f para perder o plano de saúde\n", 1500-sal);
             }
  
         }        
@@ -64,9 +59,9 @@ int main()
             total = days*10;
             printf("Você receberá %d$ em tickets", total);
             media += total;
-        }    
-        if (func == 500) // Caso desejar você pode colocar o número desejado que o programa rode aqui
-        { // porém foi pedido pela questão que seja 500
+        }        
+        if (func == 500)
+        { 
             break;
         }
     }
